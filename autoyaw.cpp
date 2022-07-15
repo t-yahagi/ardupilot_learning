@@ -5,7 +5,7 @@ Mode::AutoYaw Mode::auto_yaw;
 // roi_yaw - returns heading towards location held in roi
 float Mode::AutoYaw::roi_yaw() const
 {
-    return get_bearing_cd(copter.inertial_nav.get_position_xy_cm(), roi.xy());
+    return get_bearing_cd(roi.xy(), copter.inertial_nav.get_position_xy_cm());
 }
 
 float Mode::AutoYaw::look_ahead_yaw()
